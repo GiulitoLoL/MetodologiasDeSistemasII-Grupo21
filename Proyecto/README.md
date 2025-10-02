@@ -1,4 +1,4 @@
-﻿# MetodologiaDeSistemasII-Grupo21
+# MetodologiaDeSistemasII-Grupo21
 ## Proyecto de registro de mercadería de almacén
 
 **Integrantes**: Natalini Juan Blas, Pizzico Ramiro y Tedeschi Gómez Giuliano
@@ -29,3 +29,9 @@ Carpetas y archivos (A actualizar):
 >   - Para probar si se instaló adecuadamente
 > 6. `python manage.py runserver`
 >   - Para correr el servidor donde se mostrará el proyecto
+
+**Posibles patrones de diseño**
+
+Podriamos usar el patron Factory a la hora de crear distintos tipos de productos (bebidas, productos de limpieza, comida, etc), centralizarndo la creacion en una interfaz a la que accederia el cliente
+
+Tambien podriamos usar un patron Observer en los productos para notificar cuando les queda poco stock o cuando entran productos y sube el stock, por ejemplo
