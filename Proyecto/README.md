@@ -32,6 +32,8 @@ Carpetas y archivos (A actualizar):
 
 **Posibles patrones de diseño**
 
-Podriamos usar el patron Factory a la hora de crear distintos tipos de productos (bebidas, productos de limpieza, comida, etc), centralizarndo la creacion en una interfaz a la que accederia el cliente
+En el proyecto empezaríamos utilizando Django, un framework que nos ayudaría a la hora de modificar la base de datos que iremos a utilizar. 
 
-Tambien podriamos usar un patron Observer en los productos para notificar cuando les queda poco stock o cuando entran productos y sube el stock, por ejemplo
+Utilizaríamos el patrón Factory, centralizando la creación en la interfaz en la que accedería el cliente, esto hará que el código sea más flexible a la hora de crear productos que el cliente decida. 
+
+Notamos la necesidad de las notificaciones en la falta de productos a la hora de que quede poco producto dentro de la base de datos, entonces decidimos hacer uso del patrón Observer para que los mismos productos notifiquen la falta de stock y también la recomposición de este. 
