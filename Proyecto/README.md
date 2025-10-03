@@ -3,34 +3,37 @@
 
 **Integrantes**: Natalini Juan Blas, Pizzico Ramiro y Tedeschi Gómez Giuliano
 
-Carpetas y archivos (A actualizar):
->- proyecto (carpeta)<br>
->    - `__pycache__` (carpeta)<br>
->    - `__init__`.py<br>
->    - asgi.py<br>
->    - settings.py<br>
->    - urls.py<br>
->    - wsgi.py<br>
->- manage.py
->- README.md<br>
+### Carpetas y archivos (A actualizar):
+```
+/proyecto
+  /__pycache__ 
+  `__init__`.py
+  asgi.py
+  settings.py
+  urls.py
+  wsgi.py
+manage.py
+README.md
+```
+### ¿Cómo iniciar a trabajar en el proyecto:
+**Escribir en la terminal:**
 
-**¿Cómo iniciar a trabajar en el proyecto**:
+    ```bash
+    python --version
+      # (Para asegurarse de que tengan python y actualizado a la ultima versión (3.13.7))
+    python -m venv venv
+      # (Para crear el entorno virtual donde vamos a trabajar)
+    venv\Scripts\activate
+      # (Para iniciar el entorno virtual)
+    pip install django
+      # (Aquí descargamos el framework que vamos a estar utilizando para el projecto)
+    django-admin --version
+      # (Para probar si se instaló adecuadamente)
+    python manage.py runserver
+      # (Para correr el servidor donde se mostrará el proyecto)
+    ```
 
-> Escribir en la terminal:<br>
-> 1. `python --version`
->   - Para asegurarse de que tengan python y actualizado a la ultima versión (3.13.7)
-> 2. `python -m venv venv`
->   - Para crear el entorno virtual donde vamos a trabajar
-> 3. `venv\Scripts\activate`
->   - Para iniciar el entorno virtual
-> 4. `pip install django`
->   - Aquí descargamos el framework que vamos a estar utilizando para el projecto
-> 5. `django-admin --version`
->   - Para probar si se instaló adecuadamente
-> 6. `python manage.py runserver`
->   - Para correr el servidor donde se mostrará el proyecto
-
-**Posibles patrones de diseño**
+### Posibles patrones de diseño
 
 >En el proyecto empezaríamos utilizando Django, un framework que nos ayudaría a la hora de modificar la base de datos que iremos a utilizar. 
 >
