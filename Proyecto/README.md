@@ -18,20 +18,20 @@ README.md
 ### ¿Cómo iniciar a trabajar en el proyecto:
 **Escribir en la terminal:**
 
-    ```bash
-    python --version
-      # (Para asegurarse de que tengan python y actualizado a la ultima versión (3.13.7))
-    python -m venv venv
-      # (Para crear el entorno virtual donde vamos a trabajar)
-    venv\Scripts\activate
-      # (Para iniciar el entorno virtual)
-    pip install django
-      # (Aquí descargamos el framework que vamos a estar utilizando para el projecto)
-    django-admin --version
-      # (Para probar si se instaló adecuadamente)
-    python manage.py runserver
-      # (Para correr el servidor donde se mostrará el proyecto)
-    ```
+```bash
+python --version
+  # (Para asegurarse de que tengan python y actualizado a la ultima versión (3.13.7))
+python -m venv venv
+  # (Para crear el entorno virtual donde vamos a trabajar)
+venv\Scripts\activate
+  # (Para iniciar el entorno virtual)
+pip install django
+  # (Aquí descargamos el framework que vamos a estar utilizando para el projecto)
+django-admin --version
+  # (Para probar si se instaló adecuadamente)
+python manage.py runserver
+  # (Para correr el servidor donde se mostrará el proyecto)
+```
 
 ### Posibles patrones de diseño
 
