@@ -1,0 +1,36 @@
+/* Estilos para la tarjeta contenedora */
+.ProductCard {
+    border: 1px solid #ccc; /* Borde gris sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 15px; /* Espacio interno alrededor del contenido */
+    max-width: 250px; /* Ancho máximo para que no se extienda demasiado */
+    margin: 20px auto; /* Centrar la tarjeta en la página */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar el texto dentro de la tarjeta */
+    background-color: #f9f9f9; /* Fondo muy claro */
+    font-family: Arial, sans-serif; /* Fuente legible */
+}
+
+/* Estilos para el nombre */
+.productcard__name {
+    color: #333; /* Color de texto oscuro */
+    margin-top: 0; /* Eliminar margen superior predeterminado */
+    margin-bottom: 5px; /* Pequeño espacio debajo del nombre */
+    font-size: 1.2em; /* Un poco más grande que el texto normal */
+    font-weight: bold; /* Poner el nombre en negritas */
+}
+
+/* Estilos para la edad */
+.productcard__tipo {
+    color: #666; /* Color de texto más tenue para la edad */
+    margin-top: 5px; /* Pequeño espacio arriba */
+    margin-bottom: 0; /* Eliminar margen inferior */
+    font-size: 0.9em; /* Un poco más pequeño que el texto normal */
+}
+
+.productcard__cantidad {
+    color: #666; /* Color de texto más tenue para la edad */
+    margin-top: 5px; /* Pequeño espacio arriba */
+    margin-bottom: 0; /* Eliminar margen inferior */
+    font-size: 0.9em; /* Un poco más pequeño que el texto normal */
+}

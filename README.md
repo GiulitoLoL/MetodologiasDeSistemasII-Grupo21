@@ -5,20 +5,19 @@
 
 ### Carpetas y archivos (A actualizar):
 ```
-/src
-  /controllers
-  /models
-  /routes
-  /testing
-  app.ts
-  index.ts
-.gitignore
-package-lock.json
-package.json
-README.md
-tsconfig.json
+/Proyecto
+    /backend
+        /src
+            /controlers
+            /data
+            /models
+            /routes
+            /services
+    /frontend
+        /components
+        /stylesheets
 ```
-### ¿Cómo iniciar a trabajar en el proyecto:
+### ¿Cómo iniciar a trabajar en el proyecto (backend y frontend):
 **Escribir en la terminal:**
 
 ```bash
@@ -27,6 +26,9 @@ npm i
 
 npm run build
 #Inicirá el script que armará la carpeta /dist en su proyecto
+
+npm run dev
+#Inicia el script que dará inicio al servidor
 ```
 
 ### Posibles patrones de diseño
@@ -40,3 +42,5 @@ npm run build
 ### Cambios importantes:
 
 >Decidimos, por falta de tiempo y conocimiento sobre el lenguaje Python, cambiar de lenguaje para armar el proyecto. Estaremos utilizando typescript para el desarrollo del proyecto
+>
+>Hemos cambiado un poco la distribución del proyecto para que no sea tan enredado. Decidimos separar el backend del frontend para poder trabajar en los 2 por separado. Al no tener una base de datos firme, optamos por hacer un .json que simule una.
