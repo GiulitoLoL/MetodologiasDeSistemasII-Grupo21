@@ -5,10 +5,7 @@ import { Tipo } from '../models/productClass';
 const validTypes: Tipo[] = ["bebida", "comida", "higiene", "especias"];
 
 export class ProductController {
-    getProduct(getProduct: any) {
-        throw new Error('Method not implemented.');
-    }
-
+    
     public listProducts(req: Request, res: Response): void {
         try {
             const products = productService.getAllProducts();
@@ -18,7 +15,7 @@ export class ProductController {
             res.status(500).json({ message: "Error al obtener la lista de productos." });
         }
     }
-
+    
     public getProductById(req: Request, res: Response): void {
         try {
             const id = parseInt(req.params.id);
@@ -26,7 +23,7 @@ export class ProductController {
                 res.status(400).json({ message: "El ID debe ser un número." });
                 return;
             }
-
+            
             const product = productService.getProductById(id);
             
             if (product) {
@@ -38,15 +35,15 @@ export class ProductController {
             res.status(500).json({ message: "Error al buscar el producto." });
         }
     }
-
+    
     public getProductByType(req: Request, res: Response): void{
         try{
             const tipo = req.params.tipo;
-
+            
             if (!validTypes.includes(tipo as Tipo)) {
                 res.status(400).json({ message: `Tipo de producto inválido: ${tipo}. Tipos válidos: ${validTypes.join(', ')}` });
             }
-
+            
             const products = productService.getProductsByType(tipo);
             res.status(200).json(products); 
             
@@ -55,11 +52,11 @@ export class ProductController {
             res.status(500).json({ message: "Error interno del servidor al filtrar productos." });
         }
     }
-
+    
     public createProduct(req: Request, res: Response): void {
         try {
             const { name, tipo, cantidad } = req.body;
-
+            
             if (!name || !tipo || cantidad === undefined || typeof name !== 'string' || typeof cantidad !== 'number' || isNaN(cantidad)) {
                 res.status(400).json({ message: "Datos de entrada inválidos. Se requieren 'name' (string), 'tipo' (string) y 'cantidad' (number)." });
             }
@@ -67,12 +64,12 @@ export class ProductController {
             if (!validTypes.includes(tipo as Tipo)) {
                 res.status(400).json({ message: `Tipo de producto inválido: ${tipo}. Tipos válidos: ${validTypes.join(', ')}` });
             }
-
+            
             const newProduct = productService.createProduct({ name, tipo, cantidad });
             
             // 201 Created
             res.status(201).json(newProduct);
-
+            
         } catch (error) {
             console.error("Error al crear producto:", error);
             res.status(500).json({ message: "Error interno del servidor al crear el producto." });

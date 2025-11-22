@@ -6,8 +6,6 @@ const productController = new ProductController();
 
 router.get('/', productController.listProducts); 
 
-router.get('/:id', productController.getProductById);
-
 router.get('/type/:tipo', productController.getProductByType);
 
 router.route('/')
@@ -15,7 +13,7 @@ router.route('/')
     .post(productController.createProduct);  
 
 router.route('/:id')
-    .get(productController.getProduct)      
+    .get(productController.getProductById)     
     .put(productController.updateProduct)   
     .delete(productController.deleteProduct);
 
