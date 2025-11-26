@@ -7,10 +7,16 @@ interface Props {
 }
 
 const ProductCard = ({ name, tipo, cantidad }: Props) => {
-    return <div className="ProductCard">
+    const isOutOfStock = cantidad === 0;
+    const cardClassName = `ProductCard ${isOutOfStock ? 'out-of-stock' : ''}`;
+
+
+    return <div className={cardClassName}>
         <h1 className="productcard__name">{name}</h1>
         <h2 className="productcard__tipo">{tipo}</h2>
-        <h2 className="productcard__cantidad">{cantidad}</h2>
+        <h2 className="productcard__cantidad">
+            {isOutOfStock ? 'AGOTADO' : cantidad}
+        </h2>
     </div>
 };
 

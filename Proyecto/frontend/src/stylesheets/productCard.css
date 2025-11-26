@@ -1,4 +1,3 @@
-/* Estilo para el contenedor principal de la tarjeta */
 .ProductCard {
     background-color: white;
     padding: 20px;
@@ -6,7 +5,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: left;
-    border-left: 6px solid #2196F3; /* Acento azul */
+    border-left: 6px solid #2196F3; 
 }
 
 .ProductCard:hover {
@@ -36,13 +35,9 @@
     margin: 15px 0 0;
     font-size: 1.5em;
     font-weight: bold;
-    color: #4CAF50; /* Color verde para el stock */
+    color: #4CAF50;
 }
 
-/* Estilo para stock bajo (ej. si decides que 0 es un caso especial) */
-/* Puedes aplicar esta clase condicionalmente en React si la cantidad es 0 */
-/*
 .ProductCard.out-of-stock .productcard__cantidad {
     color: #E53935; 
 }
-*/
