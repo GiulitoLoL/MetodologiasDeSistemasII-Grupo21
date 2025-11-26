@@ -67,7 +67,6 @@ export class ProductController {
             
             const newProduct = productService.createProduct({ name, tipo, cantidad });
             
-            // 201 Created
             res.status(201).json(newProduct);
             
         } catch (error) {
