@@ -1,33 +1,32 @@
-import ProductCard from "./components/ProductCards";
-import { useState, useEffect } from "react";
-
-interface Product{
-        id:number;
-        name:string;
-        tipo:string;
-        cantidad:number;
-    }
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { ProductProvider } from "./context/ProductContext"; 
+import HomePage from "./pages/HomePage";
+import ProductManagementPage from "./pages/ProductManagementPage";
+import './stylesheets/input.css'; 
 
 const App = () => {
-    const [product, setProducts] = useState < Product[] | null >(null);
-
-    useEffect(() => {
-        fetch("/api/products")
-            .then((response) => response.json())
-            .then(data => setProducts(data))
-            .catch((err) => console.log(err));
-    }, [])
-
-    if(product === null){
-        return <div>No hay productos</div>
-    }
     return (
-        <div className = 'app'>
-            {product.map((product) => {
-                return <ProductCard key = {product.id} name = {product.name} tipo = {product.tipo} cantidad = {product.cantidad}/>
-            })}
-        </div>
-    )
+        <ProductProvider> 
+            <BrowserRouter>
+                <div className='app'>
+                    <header className="header-nav">
+                        <Link to="/"><button>🏠 Stock Principal</button></Link>
+                        <Link to="/gestion-productos">
+                            <button className="manage-button">⚙️ Administrar Productos</button>
+                        </Link>
+                    </header>
+
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route 
+                            path="/gestion-productos/:productId?" 
+                            element={<ProductManagementPage />} 
+                        />
+                    </Routes>
+                </div>
+            </BrowserRouter>
+        </ProductProvider>
+    );
 };
 
 export default App;
