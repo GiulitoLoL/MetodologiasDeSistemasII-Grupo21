@@ -8,23 +8,24 @@ const ProductManagementPage = () => {
     const { productId } = useParams();
     const { products, isLoading, refreshProducts } = useProducts();
     
-    if (products === null) {
-        return <div>Error: No se pudo cargar la lista de productos para gestión.</div>;
-    }
-    
-    const productToModify = products?.find(p => p.id === Number(productId));
-    const isEditing = !!productId;
-    
     if (isLoading) {
         return <div>Cargando la lista para gestión...</div>;
     }
+    
+    if (products === null) {
+        return <div>Error: No se pudo cargar la lista de productos para gestión.</div>;
+    }
+
+    const productToModify = products.find(p => p.id === Number(productId));
+    const isEditing = !!productId;
+    
     
     const handleModifyClick = (id: number) => {
         navigate(`/gestion-productos/${id}`);
     };
     
-    const handleInhabilitar = async (id: number) => {
-        if (!window.confirm(`¿Estás seguro de inhabilitar el producto ID ${id} (establecer cantidad a 0)?`)) {
+    const handleInhabilitar = async (id: number, name: string) => {
+        if (!window.confirm(`¿Estás seguro de inhabilitar el producto "${name}"? (Establecer cantidad a 0)`)) {
             return;
         }
 
@@ -34,20 +35,28 @@ const ProductManagementPage = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ cantidad: 0 }), 
+                body: JSON.stringify({ cantidad: 0 }),
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
+                const errorData = await response.json(); 
                 throw new Error(errorData.message || `Error al inhabilitar: ${response.status}`);
             }
 
-            refreshProducts(); 
-            alert(`Producto ID ${id} inhabilitado (Stock: 0).`);
+            const contentType = response.headers.get("content-type");
+            
+            if (contentType && contentType.includes("application/json")) {
+                await response.json();
+            }
+
+            refreshProducts();
+            alert(`Producto actualizado con éxito.`);
+
+            window.location.reload();
 
         } catch (err) {
             console.error("Error de API:", err);
-            alert(`Fallo al inhabilitar: ${err instanceof Error ? err.message : "Error desconocido"}`);
+            alert(`Fallo al inhabilitar el producto "${name}": ${err instanceof Error ? err.message : "Error desconocido"}`); 
         }
     };
     
@@ -61,14 +70,14 @@ const ProductManagementPage = () => {
                     
                     <h2>Lista para Modificar o Inhabilitar</h2>
                     <ul>
-                        {products?.map((p) => (
+                        {products.map((p) => (
                             <li key={p.id}>
                                 {p.name} (Stock: **{p.cantidad}**)
                                 <button onClick={() => handleModifyClick(p.id)} style={{ margin: '0 10px' }}>
                                     ✍️ Modificar
                                 </button>
                                 {p.cantidad > 0 ? (
-                                    <button onClick={() => handleInhabilitar(p.id)}>
+                                    <button onClick={() => handleInhabilitar(p.id, p.name)}>
                                         ❌ Establecer Stock 0 (Inhabilitar)
                                     </button>
                                 ) : (

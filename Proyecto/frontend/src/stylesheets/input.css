@@ -58,21 +58,41 @@ body {
 
 .search-container {
     margin-bottom: 30px;
-    text-align: center;
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
 }
 
 .search-container input[type="text"] {
     width: 100%;
-    max-width: 600px;
-    padding: 12px 25px;
+    max-width: 550px; 
+    padding: 12px 25px; 
     border: 1px solid #ccc;
     border-radius: 50px;
     font-size: 16px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.2s;
+    height: 42px; 
+    box-sizing: border-box;
 }
 
-.search-container input[type="text"]:focus {
+.search-container .type-select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s;
+    min-width: 250px; 
+    height: 42px; 
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+.search-container .type-select:focus {
     border-color: #4CAF50;
     outline: none;
 }

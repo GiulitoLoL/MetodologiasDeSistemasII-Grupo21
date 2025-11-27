@@ -1,0 +1,280 @@
+[
+  {
+    "id": 1,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:10:07.581Z",
+    "action": "ENABLE",
+    "description": "Producto habilitado, stock restaurado a 1.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 0
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 1
+    }
+  },
+  {
+    "id": 2,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:10:15.973Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 1 a 2.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 1
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 2
+    }
+  },
+  {
+    "id": 3,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:10:22.270Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 2 a 3.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 2
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 3
+    }
+  },
+  {
+    "id": 4,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:10:30.885Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 3 a 12.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 3
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 12
+    }
+  },
+  {
+    "id": 5,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:10:58.415Z",
+    "action": "DISABLE",
+    "description": "Producto inhabilitado (Stock establecido a 0).",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 12
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 0
+    }
+  },
+  {
+    "id": 6,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:12:06.864Z",
+    "action": "ENABLE",
+    "description": "Producto habilitado, stock restaurado a 1.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 0
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 1
+    }
+  },
+  {
+    "id": 7,
+    "productId": 11,
+    "productName": "Corona",
+    "timestamp": "2025-11-27T20:29:07.802Z",
+    "action": "CREATE",
+    "description": "Producto creado con cantidad inicial de 20.",
+    "newState": {
+      "name": "Corona",
+      "tipo": "bebida",
+      "cantidad": 20
+    }
+  },
+  {
+    "id": 8,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:34:59.530Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 1 a 2.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 1
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 2
+    }
+  },
+  {
+    "id": 9,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:35:08.321Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 2 a 3.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 2
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 3
+    }
+  },
+  {
+    "id": 10,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:35:14.984Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 3 a 4.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 3
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 4
+    }
+  },
+  {
+    "id": 11,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:35:23.826Z",
+    "action": "UPDATE",
+    "description": "Actualización de datos menores.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 4
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 4
+    }
+  },
+  {
+    "id": 12,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:35:38.401Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 4 a 5.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 4
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 5
+    }
+  },
+  {
+    "id": 13,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:35:46.473Z",
+    "action": "UPDATE",
+    "description": "Datos actualizados: cantidad de 5 a 6.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 5
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 6
+    }
+  },
+  {
+    "id": 14,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:36:44.253Z",
+    "action": "UPDATE",
+    "description": "Actualización de datos menores.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 6
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 6
+    }
+  },
+  {
+    "id": 15,
+    "productId": 9,
+    "productName": "Pizza",
+    "timestamp": "2025-11-27T20:36:50.788Z",
+    "action": "UPDATE",
+    "description": "Actualización de datos menores.",
+    "previousState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 6
+    },
+    "newState": {
+      "name": "Pizza",
+      "tipo": "comida",
+      "cantidad": 6
+    }
+  },
+  {
+    "id": 16,
+    "productId": 7,
+    "productName": "REX",
+    "timestamp": "2025-11-27T20:37:33.437Z",
+    "action": "CREATE",
+    "description": "Producto creado con cantidad inicial de 5.",
+    "newState": {
+      "name": "REX",
+      "tipo": "comida",
+      "cantidad": 5
+    }
+  }
+]

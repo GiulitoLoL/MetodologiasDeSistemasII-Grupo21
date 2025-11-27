@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Xoca-Cola",
     "tipo": "bebida",
-    "cantidad": 5
+    "cantidad": 345
   },
   {
     "id": 2,
@@ -37,8 +37,8 @@
   },
   {
     "id": 7,
-    "name": "MC Mosta",
+    "name": "REX",
     "tipo": "comida",
-    "cantidad": 80
+    "cantidad": 5
   }
 ]

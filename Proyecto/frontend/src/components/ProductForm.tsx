@@ -7,7 +7,6 @@ interface ProductFormProps {
     refreshProducts: () => void;
 }
 
-// Tipos de producto válidos según tu backend
 const validTypes: ('bebida' | 'comida' | 'higiene' | 'especias')[] = ["bebida", "comida", "higiene", "especias"];
 
 export const ProductForm: React.FC<ProductFormProps> = ({ initialData, refreshProducts }) => {
@@ -51,8 +50,8 @@ export const ProductForm: React.FC<ProductFormProps> = ({ initialData, refreshPr
             return;
         }
 
-        const method = isEditMode ? 'PUT' : 'POST';
         const url = isEditMode ? `/api/products/${initialData!.id}` : '/api/products';
+        const method = isEditMode ? 'PUT' : 'POST';
         
         const body = JSON.stringify(formData);
 
@@ -72,6 +71,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({ initialData, refreshPr
 
             refreshProducts(); 
             alert(`Producto ${isEditMode ? 'modificado' : 'agregado'} con éxito.`);
+            window.location.reload();
             navigate('/');
 
         } catch (err) {
