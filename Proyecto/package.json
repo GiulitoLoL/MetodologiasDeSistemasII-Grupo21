@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "start /wait ping -n 2 localhost > nul && cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

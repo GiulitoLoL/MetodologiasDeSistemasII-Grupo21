@@ -3,13 +3,13 @@
     "id": 1,
     "name": "Xoca-Cola",
     "tipo": "bebida",
-    "cantidad": 10
+    "cantidad": 5
   },
   {
     "id": 2,
     "name": "Cheetos",
     "tipo": "comida",
-    "cantidad": 100
+    "cantidad": 20
   },
   {
     "id": 3,
@@ -33,6 +33,12 @@
     "id": 6,
     "name": "Jabón Líquido",
     "tipo": "higiene",
+    "cantidad": 80
+  },
+  {
+    "id": 7,
+    "name": "MC Mosta",
+    "tipo": "comida",
     "cantidad": 80
   }
 ]
