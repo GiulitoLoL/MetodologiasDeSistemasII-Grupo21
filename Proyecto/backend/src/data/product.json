@@ -40,5 +40,17 @@
     "name": "REX",
     "tipo": "comida",
     "cantidad": 5
+  },
+  {
+    "id": 8,
+    "name": "Pizza",
+    "tipo": "comida",
+    "cantidad": 16
+  },
+  {
+    "id": 9,
+    "name": "MC Mosta",
+    "tipo": "comida",
+    "cantidad": 33
   }
 ]

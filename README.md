@@ -22,6 +22,11 @@
             /pages
             /stylesheets
 ```
+
+### ¿Cómo iniciar la Api?
+
+>Hemos hecho un archivo llamado programa_stock.bat que habriría la api al hacerle doble click. No asustarse del bash que se vaya a abrir, ese muestra el proceso de apertura de los servidores del frontend y del backend y los actualiza con cada modificación hecha en la api
+
 ### ¿Cómo iniciar a trabajar en el proyecto (backend y frontend):
 **Escribir en la terminal:**
 
