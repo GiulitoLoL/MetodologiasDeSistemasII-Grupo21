@@ -3,19 +3,24 @@
 
 **Integrantes**: Natalini Juan Blas, Pizzico Ramiro y Tedeschi Gómez Giuliano
 
-### Carpetas y archivos (A actualizar):
+### Carpetas y archivos:
 ```
 /Proyecto
     /backend
         /src
-            /controlers
+            /controllers
             /data
             /models
+                /interface
             /routes
             /services
     /frontend
-        /components
-        /stylesheets
+        /src
+            /components
+            /context
+            /interface
+            /pages
+            /stylesheets
 ```
 ### ¿Cómo iniciar a trabajar en el proyecto (backend y frontend):
 **Escribir en la terminal:**
@@ -41,6 +46,10 @@ npm run dev
 
 ### Cambios importantes:
 
->Decidimos, por falta de tiempo y conocimiento sobre el lenguaje Python, cambiar de lenguaje para armar el proyecto. Estaremos utilizando typescript para el desarrollo del proyecto
+>Decidimos, por falta de tiempo y conocimiento sobre el lenguaje Python, cambiar de lenguaje para armar el proyecto. Estaremos utilizando typescript para el desarrollo del proyecto.
 >
 >Hemos cambiado un poco la distribución del proyecto para que no sea tan enredado. Decidimos separar el backend del frontend para poder trabajar en los 2 por separado. Al no tener una base de datos firme, optamos por hacer un .json que simule una.
+
+### Errores que no pudimos solucionar:
+
+>Hay un error que aparece al crear y al modificar que dice que no puede leer como .json y parece que no logra hacer lo que se le pide, pero si se pasa a otra parte de la api y se recarga la página queda todo registrado como si hubiese funcionado normalmente todo.
